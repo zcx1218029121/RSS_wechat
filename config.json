@@ -1,0 +1,29 @@
+{
+  "cache": 0,
+  "cacheTime": 10000,
+  "source": [{
+      "msg": "虎扑",
+      "url": "https://rsshub.app/hupu/bbs/bxj/2",
+      "size": 5
+    },
+    {
+      "msg": "今天发生了什么？",
+      "url": "https://rsshub.app/jike/topic/553870e8e4b0cafb0a1bef68",
+      "size": 1
+    },
+    {
+      "msg": "hello uk",
+      "url": "https://rsshub.app/qdaily/category/5",
+      "size": 5
+    }
+  ],
+  "subscriber": [{
+      "name": "卡布达巨人",
+      "city": "hz"
+    },
+    {
+      "name": "杜儿子",
+      "city": "hz"
+    }
+  ]
+}
