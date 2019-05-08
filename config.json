@@ -12,18 +12,29 @@
       "size": 1
     },
     {
-      "msg": "hello uk",
+      "msg": "b站电子竞技排行榜",
+      "url": "https://rsshub.app/bilibili/partion/ranking/171/3",
+      "size": 2
+    }, {
+      "msg": "好奇心日报",
       "url": "https://rsshub.app/qdaily/category/5",
+      "size": 5
+    }, {
+      "msg": "雪球",
+      "url": "https://rsshub.app/xueqiu/user/8152922548",
+      "size": 5
+    }, {
+      "msg": "豆瓣小组",
+      "url": "s://rsshub.app/douban/group/camera",
       "size": 5
     }
   ],
   "subscriber": [{
-      "name": "卡布达巨人",
-      "city": "hz"
+      "name": "卡布达巨人"
+
     },
     {
-      "name": "杜儿子",
-      "city": "hz"
+      "name": "pumpkin"
     }
   ]
 }
