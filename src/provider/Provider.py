@@ -14,10 +14,10 @@ class provider():
 
     def getRequest(self):
         r = requests.get(self.url)
+        print(r.status_code)
         if r.status_code == 200:
             return r
         else:
-            print(r.status_code)
             return None
 
     def format(self, r):  # 解析Xml
@@ -27,7 +27,7 @@ class provider():
         xml = r.text
         xml = ElementTree.fromstring(xml)
         items = xml[0].findall("item")
-        for i in range(0, min(self.item, len(items))):
+        for i in range(0, min(self.item, len(items)-1)):
             title = items[i][0].text
             des = self.clearnDate(items[i][1].text, mcd=self.cd)
             lk = items[i][4].text

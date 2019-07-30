@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# 网络请求类负责网络请求
+# 网络请求类负责网络请求 //虽然并用不到
 import urllib.parse
 import urllib.request
 import random

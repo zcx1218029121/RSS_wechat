@@ -1,12 +1,24 @@
 # RSSWX
-1. 个人rss订阅回复机器人
+1. 安装依赖 
 
-   配置 
+   python 环境
+
+   
+
+   请在cmd中输入
+
+   ```
+   pip install -U wxpy
+   ```
+
+   
+
+2. 配置  json
 
 ```json
 {
-  "cache": 0,
-  "cacheTime": 10000, //todo 缓存
+  "cache": 0, //并没有什么用 还没实现
+  "cacheTime": 10000, //todo 缓存超时时间 单位ms
   "source": [{ //配置订阅源  
       "msg": "虎扑",
       "url": "https://rsshub.app/hupu/bbs/bxj/2",
@@ -37,7 +49,6 @@
   ],
   "subscriber": [{
       "name": "卡布达巨人" //订阅用户名
-
     },
     {
       "name": "pumpkin"
@@ -46,3 +57,32 @@
 }
 ```
 
+2. 配置源
+
+​         https://docs.rsshub.app/ 定制RSS链接
+
+```
+{
+      "msg": "好奇心日报",
+      "url": "https://rsshub.app/qdaily/category/5",
+      "size": 5
+    }
+```
+
+  msg 是指定回复的用词 
+
+ url 是订阅源的链接
+
+size 是返回的条目数 （并不建议配置太多）
+
+3. 配置订阅者
+
+   ```
+   {
+         "name": "哈士奇" //订阅用户名 
+       }
+   ```
+
+在这里配置订阅好友的信息
+
+> 配置好json后请验证是否正确

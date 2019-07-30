@@ -4,34 +4,39 @@
   "source": [{
       "msg": "虎扑",
       "url": "https://rsshub.app/hupu/bbs/bxj/2",
-      "size": 5
+      "size": 3,
+      "des": 0
     },
     {
       "msg": "今天发生了什么？",
       "url": "https://rsshub.app/jike/topic/553870e8e4b0cafb0a1bef68",
-      "size": 1
+      "size": 1,
+      "des": 1
     },
     {
       "msg": "b站电子竞技排行榜",
       "url": "https://rsshub.app/bilibili/partion/ranking/171/3",
-      "size": 2
+      "size": 3,
+      "des": 1
     }, {
       "msg": "好奇心日报",
       "url": "https://rsshub.app/qdaily/category/5",
-      "size": 5
+      "size": 4,
+      "des": 0
     }, {
       "msg": "雪球",
       "url": "https://rsshub.app/xueqiu/user/8152922548",
-      "size": 5
+      "size": 5,
+      "des": 0
     }, {
       "msg": "豆瓣小组",
-      "url": "s://rsshub.app/douban/group/camera",
-      "size": 5
+      "url": "https://rsshub.app/douban/group/camera",
+      "size": 5,
+      "des": 0
     }
   ],
   "subscriber": [{
-      "name": "卡布达巨人"
-
+      "name": "哈士奇"
     },
     {
       "name": "pumpkin"
