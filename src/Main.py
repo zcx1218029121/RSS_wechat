@@ -1,20 +1,19 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: UTF-8
 from wxpy import *
-from provider.Provider import *
+from providers.Provider import *
 import json
 import re
+from pipe.Pipe import Pipe
+import time
 
 __author__ = "短狐"
-
+cache = {}  # cache 字典对象
 bot = Bot(cache_path=True)
 map = {}  # 消息源
 fd = []  # 订阅者
 
-# 当前版本只提供简单的回复功能
-# TODO 缓存功能
 
-
-def initConfig():
+def init_config():
     f = open('../config.json', 'r', encoding='UTF-8')  # make sure utf-8
     job = json.loads(f.read())
     data = job['source']
@@ -37,14 +36,14 @@ def delAllHtml(context):
 def doReply(msg, cd=delAllHtml):
     s = ""
     try:
-        p = provider(map[msg]
+        p = Provider(map[msg]
                      ['url'], item=map[msg]['size'], cd=cd).score
 
         for j in p:
-            if(map[msg]['des'] == 0):
-                s += j.title+j.link+"\n"
+            if map[msg]['des'] == 0:
+                s += j.title + j.link + "\n"
             else:
-                s += j.title+j.context+j.link+"\n"
+                s += j.title + j.context + j.link + "\n"
 
         return s
 
@@ -55,16 +54,17 @@ def doReply(msg, cd=delAllHtml):
 
 @bot.register(fd)
 def reply_my_friend(msg):
-    if(msg.text in map):
-        if(msg.text == "今天发生了什么？"):
-            return '{} '.format(doReply(msg.text, cd=None))
-        else:
-            return '{} '.format(doReply(msg.text))
+    if msg.text in map:
+        return '{} '.format(doReply(msg.text))
     else:
         return
 
 
 if __name__ == "__main__":
-    initConfig()
-
-    embed()
+    # init_config()
+    pip = Pipe(providers=Provider('https://rsshub.app/xueqiu/user/8152922548', item=5), valid_time=1)
+    pip.get_date()
+    pip.get_date()
+    pip.get_date()
+    time.sleep(20)
+    pip.get_date()
