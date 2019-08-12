@@ -17,8 +17,8 @@
 
 ```json
 {
-  "cache": 0, //并没有什么用 还没实现
-  "cacheTime": 10000, //todo 缓存超时时间 单位ms
+  "cache": 0, //是否启用缓存
+  "cacheTime": 10000, //缓存超时时间 单位ms
   "source": [{ //配置订阅源  
       "msg": "虎扑",
       "url": "https://rsshub.app/hupu/bbs/bxj/2",
@@ -86,3 +86,10 @@ size 是返回的条目数 （并不建议配置太多）
 在这里配置订阅好友的信息
 
 > 配置好json后请验证是否正确
+
+
+
+4. 启动订阅机器人
+```
+python start.py
+```
