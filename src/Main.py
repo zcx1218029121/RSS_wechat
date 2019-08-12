@@ -25,7 +25,7 @@ def init_config():
 
     f.close()
     read_source(data)
-    # read_subscriber(sb,bot)
+    read_subscriber(sb)
     init_pip(cache_time)
 
 
@@ -72,9 +72,8 @@ def get_Provider(msg):
 @bot.register(fd)
 def reply_my_friend(msg):
     if msg.text in map:
-        print(msg)
-        print(pip.get_date(get_Provider(msg)))
-        return '{} '.format(pip.get_date(get_Provider(msg)))
+        print(msg.text)
+        return '{} '.format(pip.get_date(get_Provider(msg.text)))
     else:
         return
 
