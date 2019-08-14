@@ -2,7 +2,11 @@ import requests
 from xml.etree import ElementTree
 from domin.Iteam import *
 
-
+# Providers数据提供类 
+# 负责数据清洗 数据请求 处理http返回码 http错误处理
+# param url:请求地址
+# param cd:数据处理函数
+# param item:返回的数据条数
 def clear_date(context, mcd):
     if mcd is None:
         return context.replace(
@@ -19,6 +23,7 @@ class Provider:
         self.item = item
         self.cd = cd
 
+# 处理网络请求
     def getRequest(self):
         r = requests.get(self.url)
         print(r.status_code)
@@ -27,7 +32,8 @@ class Provider:
         else:
             return None
 
-    def format(self, r):  # 解析Xml
+# 解析xml
+    def format(self, r):  
         if r is None:
             return
 
@@ -39,9 +45,9 @@ class Provider:
             des = clear_date(items[i][1].text, mcd=self.cd)
             lk = items[i][4].text
             self.__items.append(Iteam(title, des, lk))
-
+    
+    #把一个getter方法变成属性
     @property
-    # python的set 方法
     def score(self):
         # 清空数据
         self.__items.clear()
